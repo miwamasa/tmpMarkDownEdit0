@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Markdown Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>Structured Markdown Editor</h1>
+            <div class="toolbar">
+                <button class="download-btn">📥</button>
+                <button class="upload-btn">📤</button>
+                <button class="settings-btn">⚙️</button>
+            </div>
+        </header>
+        
+        <main class="main-content">
+            <div class="editor-pane">
+                <div class="editor-toolbar">
+                    <button class="block-btn" data-type="heading">📝 Heading</button>
+                    <button class="block-btn" data-type="paragraph">📄 Paragraph</button>
+                    <button class="block-btn" data-type="list">📋 List</button>
+                    <button class="block-btn" data-type="table">📊 Table</button>
+                    <button class="block-btn" data-type="code">💻 Code</button>
+                    <div class="group-controls">
+                        <button class="group-btn" id="group-selected-btn">👥 Group Selected</button>
+                    </div>
+                </div>
+                
+                <div class="blocks-container" id="blocks-container">
+                    <!-- Blocks will be dynamically added here -->
+                </div>
+                
+                <div class="variables-panel">
+                    <h3>Variables</h3>
+                    <div class="variables-list" id="variables-list">
+                        <!-- Variables will be dynamically added here -->
+                    </div>
+                    <button class="add-variable-btn" id="add-variable-btn">➕ Add Variable</button>
+                </div>
+            </div>
+            
+            <div class="preview-pane">
+                <div class="preview-header">
+                    <h3>MARKDOWN OUTPUT</h3>
+                    <button class="copy-btn">📋 Copy</button>
+                </div>
+                <div class="preview-content" id="preview-content">
+                    <!-- Markdown preview will be rendered here -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
